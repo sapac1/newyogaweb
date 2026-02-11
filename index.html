@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Haru Yoga | 心と体を整える少人数制ヨガスタジオ</title>
+    <meta name="description" content="初心者歓迎。呼吸とアライメントを大切にする東京のヨガスタジオ。無料体験レッスン受付中。">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <style>
+        :root {
+            --primary: #22c55e;
+            --dark: #0f172a;
+            --light-bg: #f8fafc;
+            --text: #334155;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15,23,42,0.6), rgba(15,23,42,0.6)), 
+                        url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        /* Content Sections */
+        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        /* Safe Form */
+        .form-container {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 700; }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><i class="fa-solid fa-seedling"></i> Haru Yoga</div>
+</header>
+
+<section class="hero">
+    <h1>呼吸と動きで、やさしく整う。</h1>
+    <p>はじめての方も安心の少人数制プライベートスタジオ</p>
+</section>
+
+<div class="container">
+    <div class="section-title">
+        <h2>提供クラス</h2>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <i class="fa-solid fa-spa fa-3x" style="color:var(--primary)"></i>
+            <h3>入門クラス</h3>
+            <p>ヨガの基礎から丁寧に指導します。体が硬い方でも安心です。</p>
+        </div>
+        <div class="card">
+            <i class="fa-solid fa-moon fa-3x" style="color:var(--primary)"></i>
+            <h3>リラックスヨガ</h3>
+            <p>一日の疲れを癒し、良質な睡眠へと導くプログラムです。</p>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="contact">
+    <div class="section-title">
+        <h2>体験予約・お問い合わせ</h2>
+    </div>
+    <div class="form-container">
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label>お名前</label>
+                <input type="text" name="name" required placeholder="山田 太郎">
+            </div>
+            <div class="form-group">
+                <label>メールアドレス</label>
+                <input type="email" name="email" required placeholder="example@mail.com">
+            </div>
+            <div class="form-group">
+                <label>お問い合わせ内容</label>
+                <select name="type">
+                    <option>体験レッスンの予約</option>
+                    <option>入会についてのご相談</option>
+                    <option>その他</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">メッセージを送信する</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Haru Yoga (ハルヨガ) - 健康増進のためのヨガ教室</p>
+    <p style="font-size: 0.8rem; color: #94a3b8;">所在地：日本国内スタジオ | ギャンブル等とは一切関係ありません</p>
+</footer>
+
+</body>
+</html>
